@@ -1,177 +1,262 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css&quot;
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
         crossorigin="anonymous">
 
     <title>Página com Bootstrap</title>
+
+    <style>
+        body {
+            background-color: #fceef4;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #d63384, #9b59b6);
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+            border-radius: 0 0 25px 25px;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .caixa {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #b52d74;
+            margin-bottom: 20px;
+        }
+
+        .accordion-button {
+            background-color: #fff0f6;
+            color: #8e245a;
+            font-size: 16px;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #f8d7e7;
+            color: #8e245a;
+            box-shadow: none;
+        }
+
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.2rem rgba(214, 51, 132, 0.2);
+        }
+
+        .accordion-body {
+            background-color: white;
+            line-height: 1.7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #8e245a;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Minha Primeira página com HTML+Bootstrap</h1>
+    <header>
+        <h1>Minha Primeira Página com HTML + Bootstrap</h1>
+        <p class="mb-0">Aprendendo a criar páginas web responsivas!</p>
+    </header>
 
-    <p>
-        Bootstrap é um <b>framework front-end</b> de código aberto usado para criar
-        interfaces de sites e aplicações web de forma rápida e responsiva.
-        Ele fornece um <b>conjunto de componentes prontos e estilos em CSS,
-        além de recursos em JavaScript.</b>
-    </p>
+    <main>
 
-    <h1>O que o Bootstrap oferece?</h1>
+        <section class="caixa">
+            <h2>O que é Bootstrap?</h2>
 
-    <p>
-        <b>Sistema de grid (grades):</b>
-        facilita organizar o conteúdo da página em colunas que se adaptam a diferentes tamanhos de tela.
-        <br>
+            <p>
+                Bootstrap é um <b>framework front-end</b> de código aberto
+                usado para criar interfaces de sites e aplicações web de
+                forma rápida e responsiva.
+                Ele fornece um <b>conjunto de componentes prontos e estilos
+                em CSS, além de recursos em JavaScript.</b>
+            </p>
 
-        <b>Componentes prontos:</b>
-        botões, menus de navegação, formulários, tabelas, cards, modais, alertas, entre outros.
-        <br>
+            <h2>O que o Bootstrap oferece?</h2>
 
-        <b>Design responsivo:</b>
-        o layout se ajusta automaticamente para celulares, tablets e computadores.
-        <br>
+            <p>
+                <b>Sistema de grid (grades):</b>
+                facilita organizar o conteúdo da página em colunas que
+                se adaptam a diferentes tamanhos de tela.
+            </p>
 
-        <b>Classes utilitárias:</b>
-        permitem alterar espaçamentos, cores, alinhamentos e tamanhos sem escrever muito CSS.
-    </p>
+            <p>
+                <b>Componentes prontos:</b>
+                botões, menus de navegação, formulários, tabelas, cards,
+                modais, alertas, entre outros.
+            </p>
 
-    <h1> IW-1 </h1>
-    <br>
+            <p>
+                <b>Design responsivo:</b>
+                o layout se ajusta automaticamente para celulares,
+                tablets e computadores.
+            </p>
 
-    <div class="accordion" id="accordionContabilidade">
+            <p>
+                <b>Classes utilitárias:</b>
+                permitem alterar espaçamentos, cores, alinhamentos
+                e tamanhos sem escrever muito CSS.
+            </p>
+        </section>
 
-        <div class="accordion-item">
+        <section class="caixa">
+            <h2>IW-1: Perguntas sobre Doramas</h2>
 
-            <h2 class="accordion-header">
+            <div class="accordion" id="accordionContabilidade">
 
-                <button class="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne"
-                    aria-expanded="true"
-                    aria-controls="collapseOne">
+                <!-- PERGUNTA 1 -->
+                <div class="accordion-item">
 
-                    <strong>
-                        1.De qual país originam-se os famosos K-dramas, também conhecidos popularmente no Brasil como doramas coreanos?
-                    </strong>
+                    <h3 class="accordion-header">
+                        <button class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="true"
+                            aria-controls="collapseOne">
 
-                </button>
+                            <strong>
+                                1. De qual país originam-se os famosos
+                                K-dramas, também conhecidos popularmente
+                                no Brasil como doramas coreanos?
+                            </strong>
 
-            </h2>
+                        </button>
+                    </h3>
 
-            <div id="collapseOne"
-                class="accordion-collapse collapse show"
-                data-bs-parent="#accordionContabilidade">
+                    <div id="collapseOne"
+                        class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionContabilidade">
 
-                <div class="accordion-body">
+                        <div class="accordion-body">
+                            Os K-dramas (onde o "K" vem de Korean)
+                            são as <strong>produções televisivas
+                            produzidas na Coreia do Sul.</strong>
 
-                    Os K-dramas (onde o "K" vem de Korean) são as
-                    <strong>produções televisivas produzidas na Coreia do Sul.</strong>
+                            Embora o termo geral "dorama" tenha
+                            nascido da pronúncia japonesa para a
+                            palavra drama, no Brasil ele acabou
+                            virando um apelido carinhoso para séries
+                            de vários países asiáticos, sendo as
+                            sul-coreanas bastante populares.
+                        </div>
 
-                    Embora o termo geral "dorama" tenha nascido da pronúncia japonesa para a palavra drama,
+                    </div>
+                </div>
 
-                    <strong>
-                        no Brasil ele acabou virando um apelido carinhoso para séries de vários países asiáticos, sendo as sul-coreanas as mais populares.
-                    </strong>
+                <!-- PERGUNTA 2 -->
+                <div class="accordion-item">
 
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo">
+
+                            <strong>
+                                2. O que significa a sigla "OST",
+                                muito famosa entre os fãs de doramas
+                                por marcar os momentos mais emocionantes
+                                e românticos das histórias?
+                            </strong>
+
+                        </button>
+                    </h3>
+
+                    <div id="collapseTwo"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#accordionContabilidade">
+
+                        <div class="accordion-body">
+                            OST significa <strong>Original Soundtrack</strong>,
+                            ou trilha sonora original.
+                            Nos doramas, as OSTs são músicas criadas
+                            ou selecionadas especialmente para a
+                            produção, ajudando a transmitir as emoções
+                            de cada cena.
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PERGUNTA 3 -->
+                <div class="accordion-item">
+
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree"
+                            aria-expanded="false"
+                            aria-controls="collapseThree">
+
+                            <strong>
+                                3. O termo "Oppa" é muito ouvido nos
+                                doramas. Quando uma mulher o utiliza
+                                para se dirigir a um homem mais velho,
+                                o que ele geralmente indica?
+                            </strong>
+
+                        </button>
+                    </h3>
+
+                    <div id="collapseThree"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#accordionContabilidade">
+
+                        <div class="accordion-body">
+                            Na Coreia do Sul, o termo
+                            <strong>"Oppa" (오빠)</strong>
+                            é usado por mulheres para se referirem
+                            a homens mais velhos da mesma geração,
+                            como irmãos, amigos próximos ou namorados.
+
+                            É uma palavra que pode demonstrar
+                            carinho, respeito e intimidade,
+                            dependendo do contexto.
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
+        </section>
 
-        </div>
+    </main>
 
+    <footer>
+        <p>Desenvolvido para a atividade de IW-1 💗</p>
+    </footer>
 
-        <div class="accordion-item">
-
-            <h2 class="accordion-header">
-
-                <button class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="collapseTwo">
-
-                    <strong>
-                        2.O que significa a sigla "OST", muito famosa entre os fãs de doramas por marcar os momentos mais emocionantes e românticos das histórias?
-                    </strong>
-
-                </button>
-
-            </h2>
-
-            <div id="collapseTwo"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionContabilidade">
-
-                <div class="accordion-body">
-
-                    Nos doramas, as
-                    <strong>OSTs são as músicas criadas</strong>
-                    ou selecionadas especialmente para a produção.
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="accordion-item">
-
-            <h2 class="accordion-header">
-
-                <button class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree"
-                    aria-expanded="false"
-                    aria-controls="collapseThree">
-
-                    <strong>
-                        3.O termo "Oppa" é muito ouvido nos doramas. Quando uma mulher o utiliza para se dirigir a um homem mais velho, o que ele geralmente indica?
-                    </strong>
-
-                </button>
-
-            </h2>
-
-            <div id="collapseThree"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionContabilidade">
-
-                <div class="accordion-body">
-
-                    Na Coreia do Sul, o termo <strong>"Oppa" (오빠)</strong>
-                    é usado exclusivamente por mulheres para se referirem a homens mais velhos
-                    (mas que sejam da mesma geração, como irmãos, amigos próximos ou namorados).
-
-                    <strong>
-                        É uma palavra que demonstra carinho, respeito e intimidade.
-                    </strong>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js&quot;
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous">
-    </script>
+        crossorigin="anonymous"></script>
 
 </body>
-
 </html>
